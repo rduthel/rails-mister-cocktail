@@ -6,11 +6,13 @@ class DosesController < ApplicationController
 
   def create; end
 
-  def destroy; end
+  def destroy
+    Dose.find(params[:id]).destroy
+  end
 
   private
 
   def dose_params
-    require(:dose).permit(:description)
+    params.require(:dose).permit(:description)
   end
 end
