@@ -1,4 +1,6 @@
-<h1>All cocktails</h1>
+<h1>Liste des cocktails</h1>
 <%= @cocktails.each do |cocktail| %>
   <p><%= @cocktail.name %></p>
 <% end %>
+
+<%= button_to 'Ajouter un nouveau cocktail', new_cocktail_path, method: :get %>
